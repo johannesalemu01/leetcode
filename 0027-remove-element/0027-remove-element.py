@@ -4,7 +4,6 @@ class Solution:
        for value in nums:
          if value !=val:
            nums[i]=value
-           i +=1
-        #  print(nums)  
+           i +=1 
        return i   
                 
