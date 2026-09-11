@@ -6,11 +6,5 @@ class Solution:
         for right in range(1,len(nums)):
             if  nums[right] != nums[right-1]:
                 nums[left] = nums[right]
-                left += 1
-            #   nums.pop(right)
-
-            # else:
-            #   left +=1
-            #   right +=1
-        # print(nums)    
+                left += 1  
         return left  
