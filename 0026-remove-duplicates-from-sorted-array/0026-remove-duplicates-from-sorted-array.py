@@ -4,9 +4,9 @@ class Solution:
         right=1
         while right < len(nums):
             if  nums[left]== nums[right]:
-              nums.pop(left)
-            else:  
+              nums.pop(right)
+            else:
               left +=1
               right +=1
-        print(nums)    
-        return right  
+        # print(nums)    
+        return right    
