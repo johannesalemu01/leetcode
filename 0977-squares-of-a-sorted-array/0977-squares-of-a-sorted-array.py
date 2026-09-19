@@ -4,7 +4,7 @@ class Solution:
         squaredNums=[]
         
         pos=len(nums)
-        
+
         for i,num in enumerate(nums):
             if num>=0:
                 pos=i
@@ -12,6 +12,7 @@ class Solution:
                 break
 
         neg=pos-1
+        
         while neg >=0 and pos <=len(nums)-1:
             if abs(nums[neg])**2>=abs(nums[pos])**2:
                 squaredNums.append(abs(nums[pos])**2)
