@@ -3,11 +3,11 @@ class Solution:
         
 
         strNum=str(n)
-        isNew=True
+        # isNew=True
         checked=[]
-        while isNew:
+        while True:
             if n in checked:
-                isNew=False
+                return False
             sum=0
             strNum=str(n)
 
@@ -18,8 +18,6 @@ class Solution:
                 return True    
             checked.append(n)
             n=sum
-
-        return False    
 
       
 
