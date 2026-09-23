@@ -7,7 +7,7 @@ class Solution:
         checked=[]
         while isNew:
             if n in checked:
-                return False
+                isNew=False
             sum=0
             strNum=str(n)
 
@@ -18,6 +18,8 @@ class Solution:
                 return True    
             checked.append(n)
             n=sum
+
+        return False    
 
       
 
