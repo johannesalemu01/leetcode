@@ -1,9 +1,9 @@
 class Solution:
     def evaluate(self, s: str, knowledge: list[list[str]]) -> str:
 
-        newS=""
-        tempS=""
-
+        newS=[]
+        tempS=[]
+        key=""
         kdg={}
 
         for key,value in knowledge:
@@ -13,23 +13,24 @@ class Solution:
 
         for char in s:
             if char=="(":
-                newS+=tempS
-                tempS=""
+                newS.extend(tempS)
+                tempS=[]
             elif char ==")":
-                if tempS in kdg:
-                    newS+=kdg[tempS]
+                key="".join(tempS)
+                if key in kdg:
+                    newS.append(kdg[key])
 
                 else:
-                    newS+="?" 
+                    newS.append("?")
 
-                tempS=""
+                tempS=[]
                      
             else:
-                tempS+=char
+                tempS.append(char)
             
-        newS+=tempS
+        newS.extend(tempS)
 
-        return newS    
+        return "".join(newS)    
 
 
 
