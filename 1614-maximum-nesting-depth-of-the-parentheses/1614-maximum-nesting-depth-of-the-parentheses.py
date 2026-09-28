@@ -1,18 +1,14 @@
 class Solution:
     def maxDepth(self, s: str) -> int:
-        
-        stack=[]
-        max_depth=0
+        max_depth = open = 0
+        for char in s:
+            if char =="(":
+                open += 1
+            elif char ==")":
+                open -= 1
 
-        for i in s:
-            if i =="(":
-                stack.append(i)
-                max_depth=max(len(stack),max_depth)
-            elif i ==")":
-                stack.pop()
-                max_depth=max(len(stack),max_depth)
-            else:
-                continue
+            max_depth=max(open,max_depth)
+            
         return max_depth
 
 
