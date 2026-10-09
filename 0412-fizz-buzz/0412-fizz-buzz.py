@@ -12,5 +12,4 @@ class Solution:
                 result.append("Buzz")   
             else:
                 result.append(str(i))
-                print(i)
         return result             
