@@ -4,7 +4,7 @@ class Solution:
 
         vowel_s=[]
 
-        answer=[]
+        answer=list(s)
 
         counter=0
 
@@ -14,10 +14,8 @@ class Solution:
 
         for i in range(len(s)):
             if s[i] in vowels:
-                answer.append(vowel_s[counter])
+                answer[i]=vowel_s[counter]
                 counter+=1
-            else:
-                answer.append(s[i] )   
 
         return "".join(answer)       
 
