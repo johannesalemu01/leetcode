@@ -2,17 +2,17 @@ class Solution:
     def largeGroupPositions(self, s: str) -> list[list[int]]:
 
         result=[]
-        i=0
+        start=0
 
-        while i< len(s):
-            k=i
+        while start< len(s):
+            end=start
 
-            while k<len(s) and s[i]==s[k]:
-                k+=1
+            while end<len(s) and s[start]==s[end]:
+                end+=1
 
-            if k-i >=3:
-                result.append([i,k-1])   
-            i=k
+            if end-start >=3:
+                result.append([start,end-1])   
+            start=end
                
 
         return result        
