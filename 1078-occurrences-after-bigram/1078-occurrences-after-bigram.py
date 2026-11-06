@@ -4,12 +4,9 @@ class Solution:
         left=0
         right=1
         result=[]
-        
-        while right<len(txt_list)-1:
-            if txt_list[left]==first and txt_list[right]==second:
-                result.append(txt_list[right+1])
-                
-            left+=1
-            right+=1
+
+        for i in range(len(txt_list) - 2):
+            if txt_list[i] == first and txt_list[i + 1] == second:
+                result.append(txt_list[i + 2])
 
         return result           
