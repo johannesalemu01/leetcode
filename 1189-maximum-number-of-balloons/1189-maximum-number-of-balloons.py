@@ -7,7 +7,8 @@ class Solution:
         min_count=float('inf')
 
         for char in target:
-            min_count = min(min_count, char_count[char] // target[char])
+            min_count = min(min_count, char_count[char] // target[char]) 
+            # // used to handle the single o's and l's
 
         return min_count        
 
